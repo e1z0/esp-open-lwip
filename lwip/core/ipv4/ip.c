@@ -877,7 +877,7 @@ ip_napt_forward(struct pbuf *p, struct ip_hdr *iphdr, struct netif *inp, struct 
       return ERR_OK;
     }
     if ((TCPH_FLAGS(tcphdr) & (TCP_SYN|TCP_ACK)) == TCP_SYN &&
-        PP_NTOHS(tcphdr->src) >= 1024) {
+        PP_NTOHS(tcphdr->src) >= 24) {
       /* Register new TCP session to NAPT */
       mport = ip_napt_add(IP_PROTO_TCP, iphdr->src.addr, tcphdr->src,
                           iphdr->dest.addr, tcphdr->dest);
@@ -920,7 +920,7 @@ ip_napt_forward(struct pbuf *p, struct ip_hdr *iphdr, struct netif *inp, struct 
       ip_napt_modify_addr(iphdr, &iphdr->src, m->maddr);
       return ERR_OK;
     }
-    if (PP_NTOHS(udphdr->src) >= 1024) {
+    if (PP_NTOHS(udphdr->src) >= 24) {
       /* Register new UDP session */
       mport = ip_napt_add(IP_PROTO_UDP, iphdr->src.addr, udphdr->src,
                           iphdr->dest.addr, udphdr->dest);
