@@ -1231,9 +1231,9 @@
 /**
  * LWIP_HAVE_SLIPIF==1: Support slip interface and slipif.c
  */
-#ifndef LWIP_HAVE_SLIPIF
-#define LWIP_HAVE_SLIPIF                0
-#endif
+//#ifndef LWIP_HAVE_SLIPIF
+#define LWIP_HAVE_SLIPIF                1
+//#endif
 
 /*
    ------------------------------------
