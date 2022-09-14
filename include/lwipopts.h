@@ -1244,7 +1244,7 @@
  * LWIP_HAVE_ENC28J60IF==1: Support ENC28J60 ethernet interface and espenc.c
  */
 //#ifndef LWIP_HAVE_ENC28J60IF
-#define LWIP_HAVE_ENC28J60IF            1
+#define LWIP_HAVE_ENC28J60IF            0
 //#endif
 
 /*
