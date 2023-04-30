@@ -12,7 +12,7 @@ extern "C" {
 
 /* Default size of the tables used for NAPT */
 #define IP_NAPT_MAX 512
-#define IP_PORTMAP_MAX 32
+#define IP_PORTMAP_MAX 512
 
 /* Timeouts in sec for the various protocol types */
 #define IP_NAPT_TIMEOUT_MS_TCP (30*60*1000)
